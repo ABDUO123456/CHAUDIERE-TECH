@@ -1,0 +1,242 @@
+/* ================================================================
+   ELITE MASTER SYSTEM | ALL-IN-ONE STYLING
+   PROJECT: CHAUDIÈRE TECH | DEV: ABDELKADER
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syncopate:wght@400;700&display=swap');
+
+:root {
+    --accent: #00f2ff;           /* لون النيون الأساسي */
+    --accent-glow: rgba(0, 242, 255, 0.3);
+    --bg-dark: #030508;          /* خلفية سوداء عميقة */
+    --card-bg: rgba(10, 15, 25, 0.7);
+    --border-color: rgba(0, 242, 255, 0.15);
+    --text-main: #f0faff;
+    --text-dim: #64748b;
+    --glass: blur(12px);
+    --transition: all 0.4s cubic-bezier(0.15, 0.85, 0.35, 1);
+}
+
+/* ================= التنسيق الأساسي ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    /* هالات النيون الخلفية */
+    background-image: 
+        radial-gradient(circle at 0% 0%, var(--accent-glow) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, var(--accent-glow) 0%, transparent 40%),
+        radial-gradient(circle at 2px 2px, rgba(0, 242, 255, 0.02) 1px, transparent 0);
+    background-size: 100% 100%, 100% 100%, 30px 30px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 60px 5%;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ================= زر الرجوع (Back Button) ================= */
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    background: rgba(0, 242, 255, 0.05);
+    margin-bottom: 40px;
+    transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.btn-back:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 20px var(--accent);
+    transform: translateX(-5px);
+}
+
+/* ================= العناوين (Titles) ================= */
+.section-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(20px, 5vw, 32px);
+    letter-spacing: 8px;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    color: var(--accent);
+    text-shadow: 0 0 15px var(--accent);
+}
+
+/* ================= الجداول (Tables) ================= */
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    backdrop-filter: var(--glass);
+    border: 1px solid var(--border-color);
+    margin-bottom: 50px;
+}
+
+.tech-table th, .tech-table td {
+    padding: 18px;
+    text-align: left;
+    border: 1px solid rgba(0, 242, 255, 0.05);
+}
+
+.tech-table th {
+    background: rgba(0, 242, 255, 0.05);
+    color: var(--accent);
+    font-family: 'Syncopate', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.tech-table tr:hover {
+    background: rgba(0, 242, 255, 0.02);
+}
+
+/* ================= البطاقات (Cards) ================= */
+.repair-item, .step-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    backdrop-filter: var(--glass);
+    transition: var(--transition);
+}
+
+.repair-item:hover, .step-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 255, 0.1);
+}
+
+.error-id {
+    font-family: 'Syncopate', sans-serif;
+    color: var(--accent);
+    font-size: 26px;
+    text-shadow: 0 0 10px var(--accent);
+    margin-bottom: 10px;
+}
+
+.fault-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 12px;
+    font-size: 10px;
+    color: var(--text-dim);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* ================= القوائم (Lists) ================= */
+.task-list {
+    list-style: none;
+}
+
+.task-list li {
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 12px;
+    padding: 20px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.task-list li:hover {
+    background: rgba(0, 242, 255, 0.05);
+    padding-left: 30px;
+}
+
+.task-list li span {
+    color: var(--accent);
+    font-weight: bold;
+    font-family: 'Syncopate';
+    font-size: 12px;
+}
+
+/* ================= التنبيهات (Alerts) ================= */
+.action-box {
+    background: rgba(0, 242, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent);
+    padding: 15px;
+    color: var(--accent);
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.warning-box {
+    background: rgba(255, 77, 77, 0.05);
+    border: 1px dashed #ff4d4d;
+    color: #ff4d4d;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 11px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* ================= التذييل (Footer) ================= */
+.main-footer {
+    margin-top: 100px;
+    padding: 50px 0 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-brand h4 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-brand span {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+.footer-brand p {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+}
+
+.footer-copyright {
+    margin-top: 30px;
+    font-size: 9px;
+    color: #334155;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ================= دعم الهواتف ================= */
+@media (max-width: 768px) {
+    body { padding: 40px 3%; }
+    .section-title { letter-spacing: 4px; }
+    .tech-table th, .tech-table td { padding: 12px; font-size: 12px; }
+}

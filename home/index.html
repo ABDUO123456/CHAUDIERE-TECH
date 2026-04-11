@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANDS GUIDE | CHAUDIÈRE TECH</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syncopate:wght@700&display=swap');
+
+:root {
+    --accent: #00f2ff;
+    --bg: #030508;
+    --card: rgba(10, 15, 25, 0.9);
+    --border: rgba(0, 242, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    background-image: radial-gradient(circle at 50% 50%, #0a121a 0%, #030508 100%);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 40px 5%;
+    line-height: 1.6;
+}
+
+.content-wrapper { max-width: 1100px; margin: 0 auto; }
+
+/* زر الرجوع */
+.btn-back {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Syncopate';
+    font-size: 10px;
+    border: 1px solid var(--accent);
+    padding: 10px 15px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* العناوين */
+.section-title { font-family: 'Syncopate'; letter-spacing: 5px; text-align: center; margin-bottom: 50px; }
+.section-title span { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
+
+/* تنظيم الشبكة */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* الكروت */
+.support-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.support-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+
+.card-id { font-family: 'Syncopate'; color: var(--accent); font-size: 20px; }
+.card-tag { font-size: 10px; color: #64748b; margin-bottom: 15px; }
+
+.support-card h3 { font-family: 'Syncopate'; font-size: 18px; margin-bottom: 10px; letter-spacing: 1px; }
+
+/* ألوان الماركات */
+.nova h3 { color: #00f2ff; }
+.beretta h3 { color: #ff3e3e; }
+.saunier h3 { color: #ffffff; }
+
+.support-card p { font-size: 13px; color: #94a3b8; margin-bottom: 20px; }
+
+.action-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    padding: 10px;
+    font-family: 'Syncopate';
+    font-size: 9px;
+    text-align: center;
+    color: var(--accent);
+}
+
+/* الفوتر */
+.main-footer { margin-top: 80px; padding-top: 30px; border-top: 1px solid var(--border); }
+.footer-brand h4 { font-family: 'Syncopate'; letter-spacing: 3px; }
+.footer-brand span { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <main class="content-wrapper">
+        <a href="idex.html" class="btn-back">← BACK TO DASHBOARD</a>
+        
+        <h2 class="section-title">CERTIFIED <span>BRANDS</span></h2>
+        
+        <div class="support-grid">
+            <div class="support-card nova">
+                <div class="card-id">01</div>
+                <div class="card-tag">ITALIAN PRECISION</div>
+                <h3>NOVA FLORIDA</h3>
+                <p>Specialized in Delfis, Orion, and Libera models. Focus on heat exchanger & gas valve calibration.</p>
+                <div class="action-box">OPEN NOVA DATABASE</div>
+            </div>
+
+            <div class="support-card beretta">
+                <div class="card-id">02</div>
+                <div class="card-tag">RELIABLE HEATING</div>
+                <h3>BERETTA</h3>
+                <p>Support for Mynute, Exclusive, and Ciao models. Advanced PCB diagnostics and sensor testing.</p>
+                <div class="action-box">OPEN BERETTA DATA</div>
+            </div>
+
+            <div class="support-card saunier">
+                <div class="card-id">03</div>
+                <div class="card-tag">FRENCH TECHNOLOGY</div>
+                <h3>SAUNIER DUVAL</h3>
+                <p>Themaclassic, Themafast, and Isofast expert guide. Low pressure & pump circulation faults.</p>
+                <div class="action-box">OPEN SAUNIER PORTAL</div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <div class="footer-brand">
+                <h4>CHAUDIÈRE <span>TECH</span></h4>
+                <p>MULTI-BRAND TECHNICAL REFERENCE</p>
+            </div>
+            <div class="footer-copyright">© 2026 CYBERDZ | ENGINEER: ABDELKADER</div>
+        </footer>
+    </main>
+</body>
+</html>
